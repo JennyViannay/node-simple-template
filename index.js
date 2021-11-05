@@ -16,8 +16,7 @@ app.use(bodyParser.urlencoded({
 app.use('/articles', articlesRoutes);
 
 app.get('/', (req, res) => {
-    console.log("['TEST']")
     res.send('Hello From HomePage')
 });
 
-app.listen(PORT, () => { console.log(`✅ -- Server Running on port: http://localhost:${PORT} -- ✅`)});
+app.listen(PORT, () => console.log(`✅ -- Server Running on port: http://localhost:${PORT} -- ✅`));

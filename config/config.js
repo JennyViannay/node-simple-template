@@ -12,11 +12,8 @@ const connection = mysql.createConnection({
 }) 
 
 connection.connect((err) => {
-    if (!err) {
-        console.log(`✅ -- MySql is connected on ${process.env.DB_HOST}'s database, port ${process.env.DB_PORT} -- ✅ `);
-    } else {
-        console.log("-- 👎 -- Error connecting MySql : -- 👎 -- ", err);
-    }
+    if (!err) console.log(`✅ -- MySql is connected on ${process.env.DB_HOST}'s database, port ${process.env.DB_PORT} -- ✅ `);
+    else console.log("-- 👎 -- Error connecting MySql : -- 👎 -- ", err);
 });
 
 export default connection;
